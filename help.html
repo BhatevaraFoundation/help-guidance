@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>S.T.BHATEVARA FOUNDATION</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* two equal columns */
+      gap: 20px;
+      width: 80%; /* limit to 80% of device width */
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    header img {
+      max-height: 100px;
+    }
+    .video-section {
+      margin-bottom: 20px;
+    }
+    video {
+      width: 100%;   /* responsive to column width */
+      height: auto;
+      display: block;
+    }
+    .help-text {
+      background: #eef;
+      padding: 15px;
+      border-radius: 5px;
+      height: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <div style="width:100%;">
+    <header>
+      <img src="banner.png" alt="Foundation Logo">
+      <h1>Training Resources for Volunteers & NGOs</h1>
+    </header>
+
+    <div class="container">
+      <!-- Left column: videos -->
+      <div>
+        <div class="video-section">
+          <h2>Form Filling Guidance</h2>
+          <video controls>
+            <source src="Form_filling_guidance.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="video-section">
+          <h2>NGO Confirmation Checkbox Guidance</h2>
+          <video controls>
+            <source src="NGO_Confirmation_guidance.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="video-section">
+          <h2>Website Login Guidance</h2>
+          <video controls>
+            <source src="Website_login_guidance.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Right column: help text -->
+      <div class="help-text">
+        <h3>Help & Guidance</h3>
+        <p>
+          - Use the navigation menu at the top of the site to access different sections.<br>
+          - Always ensure you are logged in with your NGO account before submitting forms.<br>
+          - If you face issues, check the FAQ section or contact the support team.<br>
+          - Volunteers should watch Video 1 first to understand the basics of navigating the site.<br>
+          - NGOs should pay special attention to Video 2 and Video 3 for form submission and reporting.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
