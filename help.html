@@ -26,19 +26,103 @@
     header img {
       max-height: 100px;
     }
-    .video-section {
+    .video-section h2 {
+      margin-top: 0;
       margin-bottom: 20px;
+      color: #333;
+    }
+    .video-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 180px;
+      background-color: #edf2f7;
+      border: 2px dashed #cbd5e0;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #718096;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+    .video-placeholder .play-icon {
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 8px;
+      opacity: 0.75;
+    }
+    .video-placeholder .placeholder-text {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .video-info h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.15rem;
+      color: #2d3748;
+    }
+    .video-desc {
+      margin: 0 0 10px 0;
+      font-size: 0.95rem;
+      color: #4a5568;
+    }
+    .video-status {
+      display: inline-block;
+      margin: 0;
+      padding: 4px 10px;
+      background-color: #e2e8f0;
+      color: #4a5568;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
     }
     video {
       width: 100%;   /* responsive to column width */
       height: auto;
       display: block;
+      border-radius: 4px;
     }
     .help-text {
       background: #eef;
       padding: 15px;
       border-radius: 5px;
       height: fit-content;
+    }
+
+    /* Responsive styles for Tablet and Mobile */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 20px auto;
+        padding: 0 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        width: 95%;
+        padding: 0 5px;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .video-card {
+        padding: 12px;
+      }
+      .video-placeholder {
+        min-height: 150px;
+      }
     }
   </style>
 </head>
@@ -50,26 +134,49 @@
     </header>
 
     <div class="container">
-      <!-- Left column: videos -->
-      <div>
-        <div class="video-section">
-          <h2>Form Filling Guidance</h2>
-          <p>To be uploaded</p>
-          <!-- 
-          <video controls>
-            <source src="Form_filling_guidance.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          -->
+      <!-- Left column: Training Videos -->
+      <div class="video-section">
+        <h2>Training Videos</h2>
+
+        <!-- Training Video – Part 1 -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <video controls>
+              <source src="Form_filling_guidance_part1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>How to fill Form A - Part 1</h3>
+          </div>
         </div>
 
-        <div class="video-section">
-          <h2>NGO Confirmation Checkbox Guidance</h2>
-          <video controls>
-            <source src="NGO_Confirmation_guidance.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <!-- Training Video – Part 2 -->
+        <div class="video-card">
+          <div class="video-placeholder">
+            <video controls>
+              <source src="Form_filling_guidance_part2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>How to fill Form A - Part 2</h3>
+          </div>
         </div>
+
+        <!-- Training Video – Part 3 -->
+        <div class="video-card">
+          <!-- Video Placeholder: Replace contents with <video> element when MP4 source is available -->
+          <div class="video-placeholder">
+            <video controls>
+              <source src="Form_filling_guidance_part3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>How to fill Form A - Part 3</h3>
+          </div>
+        </div>
+      
+        <h2>NGO Confirmation Checkbox Guidance</h2>
+        <video controls> <source src="NGO_Confirmation_guidance.mp4" type="video/mp4"> </video>
 
         <div class="video-section">
           <h2>Website Login Guidance</h2>
@@ -78,7 +185,7 @@
             Your browser does not support the video tag.
           </video>
         </div>
-      </div>
+    </div>
 
       <!-- Right column: help text -->
       <div class="help-text">
